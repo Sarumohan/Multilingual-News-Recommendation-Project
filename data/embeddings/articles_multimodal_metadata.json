@@ -1,0 +1,290 @@
+{
+  "art_en_001": {
+    "article_id": "art_en_001",
+    "language": "en",
+    "category": "technology",
+    "title": "Breakthrough in Generative AI and Multilingual Foundation Models",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_en_002": {
+    "article_id": "art_en_002",
+    "language": "en",
+    "category": "science",
+    "title": "Global Renewable Energy Investments Surge Past Record Highs",
+    "has_image": false,
+    "fusion_mode": "text_only",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_en_003": {
+    "article_id": "art_en_003",
+    "language": "en",
+    "category": "science",
+    "title": "Space Agency Successfully Completes Deep Space Telescope Calibration",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_en_004": {
+    "article_id": "art_en_004",
+    "language": "en",
+    "category": "technology",
+    "title": "International Tech Summit Focuses on Explainable AI and Algorithmic Fairness",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_en_005": {
+    "article_id": "art_en_005",
+    "language": "en",
+    "category": "sports",
+    "title": "National Cricket Championship Delivers Thrilling Final Over Victory",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_en_006": {
+    "article_id": "art_en_006",
+    "language": "en",
+    "category": "business",
+    "title": "Central Banks Introduce New Digital Currency Settlement Platform",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_hi_001": {
+    "article_id": "art_hi_001",
+    "language": "hi",
+    "category": "science",
+    "title": "इसरो ने गगनयान मिशन के लिए क्रायोजेनिक इंजन का सफल परीक्षण किया",
+    "has_image": false,
+    "fusion_mode": "text_only",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_hi_002": {
+    "article_id": "art_hi_002",
+    "language": "hi",
+    "category": "business",
+    "title": "डिजिटल भुगतान और यूपीआई ने तोड़े रिकॉर्ड, वित्तीय समावेशन में भारी वृद्धि",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_hi_003": {
+    "article_id": "art_hi_003",
+    "language": "hi",
+    "category": "technology",
+    "title": "भारतीय प्रौद्योगिकी संस्थानों में कृत्रिम बुद्धिमत्ता और मशीन लर्निंग अनुसंधान केंद्र का उद्घाटन",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_hi_004": {
+    "article_id": "art_hi_004",
+    "language": "hi",
+    "category": "science",
+    "title": "सौर ऊर्जा उत्पादन में भारत ने बनाई नई पहचान, हरित ऊर्जा क्षमता में आत्मनिर्भरता की ओर कदम",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_hi_005": {
+    "article_id": "art_hi_005",
+    "language": "hi",
+    "category": "sports",
+    "title": "भारतीय क्रिकेट टीम ने घरेलू श्रृंखला में शानदार प्रदर्शन कर श्रृंखला जीती",
+    "has_image": false,
+    "fusion_mode": "text_only",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_as_001": {
+    "article_id": "art_as_001",
+    "language": "as",
+    "category": "science",
+    "title": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত এশিঙীয়া গঁড়ৰ সংখ্যা বৃদ্ধি আৰু সংৰক্ষণৰ সফল অভিযান",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_as_002": {
+    "article_id": "art_as_002",
+    "language": "as",
+    "category": "technology",
+    "title": "অসমত তথ্য প্ৰযুক্তি আৰু কৃত্ৰিম বুদ্ধিমত্তা কেন্দ্ৰ স্থাপনৰ ঘোষণা",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_as_003": {
+    "article_id": "art_as_003",
+    "language": "as",
+    "category": "business",
+    "title": "ব্ৰহ্মপুত্ৰ নদীৰ বান নিয়ন্ত্ৰণ আৰু নদীপথ উন্নয়নৰ বাবে নতুন মেগা প্ৰকল্প",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_as_004": {
+    "article_id": "art_as_004",
+    "language": "as",
+    "category": "science",
+    "title": "গুৱাহাটী মহানগৰীত নৱীকৰণযোগ্য সৌৰ শক্তি প্ৰকল্পৰ শুভ উদ্বোধন",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  },
+  "art_as_005": {
+    "article_id": "art_as_005",
+    "language": "as",
+    "category": "business",
+    "title": "অসমৰ চাহ উদ্যোগত নতুন প্ৰযুক্তিৰ ব্যৱহাৰ আৰু আন্তঃৰাষ্ট্ৰীয় ৰপ্তানি বৃদ্ধি",
+    "has_image": true,
+    "fusion_mode": "multimodal",
+    "weights": {
+      "alpha": 0.7,
+      "beta": 0.3
+    },
+    "dimensions": {
+      "fused_concat": 2432,
+      "fused_projected": 384,
+      "fused_indicbert": 2816
+    },
+    "generated_at": "2026-11-07 09:04:53 UTC"
+  }
+}

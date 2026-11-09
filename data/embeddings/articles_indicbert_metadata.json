@@ -1,0 +1,146 @@
+{
+  "art_en_001": {
+    "article_id": "art_en_001",
+    "title": "Breakthrough in Generative AI and Multilingual Foundation Models",
+    "language": "en",
+    "category": "technology",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_en_002": {
+    "article_id": "art_en_002",
+    "title": "Global Renewable Energy Investments Surge Past Record Highs",
+    "language": "en",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_en_003": {
+    "article_id": "art_en_003",
+    "title": "Space Agency Successfully Completes Deep Space Telescope Calibration",
+    "language": "en",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_en_004": {
+    "article_id": "art_en_004",
+    "title": "International Tech Summit Focuses on Explainable AI and Algorithmic Fairness",
+    "language": "en",
+    "category": "technology",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_en_005": {
+    "article_id": "art_en_005",
+    "title": "National Cricket Championship Delivers Thrilling Final Over Victory",
+    "language": "en",
+    "category": "sports",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_en_006": {
+    "article_id": "art_en_006",
+    "title": "Central Banks Introduce New Digital Currency Settlement Platform",
+    "language": "en",
+    "category": "business",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_hi_001": {
+    "article_id": "art_hi_001",
+    "title": "इसरो ने गगनयान मिशन के लिए क्रायोजेनिक इंजन का सफल परीक्षण किया",
+    "language": "hi",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_hi_002": {
+    "article_id": "art_hi_002",
+    "title": "डिजिटल भुगतान और यूपीआई ने तोड़े रिकॉर्ड, वित्तीय समावेशन में भारी वृद्धि",
+    "language": "hi",
+    "category": "business",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_hi_003": {
+    "article_id": "art_hi_003",
+    "title": "भारतीय प्रौद्योगिकी संस्थानों में कृत्रिम बुद्धिमत्ता और मशीन लर्निंग अनुसंधान केंद्र का उद्घाटन",
+    "language": "hi",
+    "category": "technology",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_hi_004": {
+    "article_id": "art_hi_004",
+    "title": "सौर ऊर्जा उत्पादन में भारत ने बनाई नई पहचान, हरित ऊर्जा क्षमता में आत्मनिर्भरता की ओर कदम",
+    "language": "hi",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_hi_005": {
+    "article_id": "art_hi_005",
+    "title": "भारतीय क्रिकेट टीम ने घरेलू श्रृंखला में शानदार प्रदर्शन कर श्रृंखला जीती",
+    "language": "hi",
+    "category": "sports",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_as_001": {
+    "article_id": "art_as_001",
+    "title": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত এশিঙীয়া গঁড়ৰ সংখ্যা বৃদ্ধি আৰু সংৰক্ষণৰ সফল অভিযান",
+    "language": "as",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_as_002": {
+    "article_id": "art_as_002",
+    "title": "অসমত তথ্য প্ৰযুক্তি আৰু কৃত্ৰিম বুদ্ধিমত্তা কেন্দ্ৰ স্থাপনৰ ঘোষণা",
+    "language": "as",
+    "category": "technology",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_as_003": {
+    "article_id": "art_as_003",
+    "title": "ব্ৰহ্মপুত্ৰ নদীৰ বান নিয়ন্ত্ৰণ আৰু নদীপথ উন্নয়নৰ বাবে নতুন মেগা প্ৰকল্প",
+    "language": "as",
+    "category": "business",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_as_004": {
+    "article_id": "art_as_004",
+    "title": "গুৱাহাটী মহানগৰীত নৱীকৰণযোগ্য সৌৰ শক্তি প্ৰকল্পৰ শুভ উদ্বোধন",
+    "language": "as",
+    "category": "science",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  },
+  "art_as_005": {
+    "article_id": "art_as_005",
+    "title": "অসমৰ চাহ উদ্যোগত নতুন প্ৰযুক্তিৰ ব্যৱহাৰ আৰু আন্তঃৰাষ্ট্ৰীয় ৰপ্তানি বৃদ্ধি",
+    "language": "as",
+    "category": "business",
+    "model_name": "ai4bharat/IndicBERTv2-SS",
+    "embedding_dim": 768,
+    "generated_at": "2026-11-06 07:12:34 UTC"
+  }
+}

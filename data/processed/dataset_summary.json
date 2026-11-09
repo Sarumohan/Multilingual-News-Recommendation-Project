@@ -1,0 +1,33 @@
+{
+  "total_articles": 16,
+  "language_distribution": {
+    "en": 6,
+    "hi": 5,
+    "as": 5
+  },
+  "category_distribution": {
+    "science": 6,
+    "technology": 4,
+    "business": 4,
+    "sports": 2
+  },
+  "sources_count": 15,
+  "avg_title_words": 10.31,
+  "avg_abstract_words": 19.94,
+  "articles_with_images": 16,
+  "missing_values": {
+    "article_id": 0,
+    "title": 0,
+    "abstract": 0,
+    "content": 0,
+    "language": 0,
+    "category": 0,
+    "subcategory": 0,
+    "source_name": 0,
+    "source_url": 0,
+    "image_url": 0,
+    "published_at": 0,
+    "cleaned_text": 0
+  },
+  "generated_at": "2026-11-07 10:23:25 UTC"
+}

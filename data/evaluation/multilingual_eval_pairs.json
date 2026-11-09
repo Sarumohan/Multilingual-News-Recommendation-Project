@@ -1,0 +1,123 @@
+[
+  {
+    "id": "eval_as_as_01",
+    "pair_type": "AS-AS",
+    "topic": "wildlife_conservation",
+    "is_equivalent": true,
+    "lang1": "as",
+    "text1": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত এশিঙীয়া গঁড়ৰ সংখ্যা বৃদ্ধি পাইছে আৰু সংৰক্ষণ অভিযান সফল হৈছে।",
+    "lang2": "as",
+    "text2": "বন বিভাগৰ চোৰাং চিকাৰ বিৰোধী পদক্ষেপে কাজিৰঙাত বনৰীয়া গঁড়ৰ সুৰক্ষা নিশ্চিত কৰিছে।"
+  },
+  {
+    "id": "eval_as_as_02",
+    "pair_type": "AS-AS",
+    "topic": "negative_wildlife_vs_solar",
+    "is_equivalent": false,
+    "lang1": "as",
+    "text1": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত এশিঙীয়া গঁড়ৰ সংখ্যা বৃদ্ধি পাইছে।",
+    "lang2": "as",
+    "text2": "গুৱাহাটী মহানগৰীত নৱীকৰণযোগ্য সৌৰ শক্তি পেনেল স্থাপন কৰি বিদ্যুৎ উৎপাদন আৰম্ভ কৰা হৈছে।"
+  },
+  {
+    "id": "eval_as_hi_01",
+    "pair_type": "AS-HI",
+    "topic": "artificial_intelligence",
+    "is_equivalent": true,
+    "lang1": "as",
+    "text1": "অসমত তথ্য প্ৰযুক্তি আৰু কৃত্ৰিম বুদ্ধিমত্তা গৱেষণা কেন্দ্ৰ স্থাপনৰ ঘোষণা কৰা হৈছে।",
+    "lang2": "hi",
+    "text2": "शीर्ष संस्थानों में कृत्रिम बुद्धिमत्ता और मशीन लर्निंग अनुसंधान केंद्रों की स्थापना की गई।"
+  },
+  {
+    "id": "eval_as_hi_02",
+    "pair_type": "AS-HI",
+    "topic": "clean_energy",
+    "is_equivalent": true,
+    "lang1": "as",
+    "text1": "গুৱাহাটী মহানগৰীত নৱীকৰণযোগ্য সৌৰ শক্তি প্ৰকল্পৰ মাধ্যমেৰে সেউজ বিদ্যুৎ উৎপাদন আৰম্ভ হৈছে।",
+    "lang2": "hi",
+    "text2": "सौर ऊर्जा उत्पादन में भारत ने बनाई नई पहचान, हरित ऊर्जा क्षमता में ऐतिहासिक वृद्धि।"
+  },
+  {
+    "id": "eval_as_hi_03",
+    "pair_type": "AS-HI",
+    "topic": "negative_tea_vs_cricket",
+    "is_equivalent": false,
+    "lang1": "as",
+    "text1": "অসমৰ চাহ উদ্যোগত নতুন জৈৱ প্ৰযুক্তিৰ ব্যৱহাৰ আৰু আন্তঃৰাষ্ট্ৰীয় ৰপ্তানি বৃদ্ধি পাইছে।",
+    "lang2": "hi",
+    "text2": "भारतीय क्रिकेट टीम ने घरेलू टेस्ट श्रृंखला में शानदार प्रदर्शन कर श्रृंखला जीती।"
+  },
+  {
+    "id": "eval_as_en_01",
+    "pair_type": "AS-EN",
+    "topic": "artificial_intelligence",
+    "is_equivalent": true,
+    "lang1": "as",
+    "text1": "অসমত তথ্য প্ৰযুক্তি আৰু কৃত্ৰিম বুদ্ধিমত্তা গৱেষণা কেন্দ্ৰ স্থাপনৰ ঘোষণা কৰা হৈছে।",
+    "lang2": "en",
+    "text2": "Researchers have announced breakthroughs in artificial intelligence and machine learning research centers."
+  },
+  {
+    "id": "eval_as_en_02",
+    "pair_type": "AS-EN",
+    "topic": "wildlife_conservation",
+    "is_equivalent": true,
+    "lang1": "as",
+    "text1": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত চোৰাং চিকাৰ প্ৰতিৰোধ আৰু এশিঙীয়া গঁড় সংৰক্ষণৰ সফল অভিযান।",
+    "lang2": "en",
+    "text2": "Anti-poaching measures and wildlife protection successfully increased the rhino population in Kaziranga National Park."
+  },
+  {
+    "id": "eval_as_en_03",
+    "pair_type": "AS-EN",
+    "topic": "negative_tea_vs_cbdc",
+    "is_equivalent": false,
+    "lang1": "as",
+    "text1": "অসমৰ চাহ উদ্যোগত আধুনিক জৈৱ প্ৰযুক্তিৰ ব্যৱহাৰ আৰু আন্তঃৰাষ্ট্ৰীয় চাহ ৰপ্তানি বৃদ্ধি।",
+    "lang2": "en",
+    "text2": "Central banks introduced a cross-border wholesale central bank digital currency settlement platform."
+  },
+  {
+    "id": "eval_as_en_04",
+    "pair_type": "AS-EN",
+    "topic": "negative_wildlife_vs_space",
+    "is_equivalent": false,
+    "lang1": "as",
+    "text1": "কাজিৰঙা ৰাষ্ট্ৰীয় উদ্যানত এশিঙীয়া গঁড়ৰ সংৰক্ষণ সুনিশ্চিত কৰা হৈছে।",
+    "lang2": "en",
+    "text2": "The orbital deep space telescope completed its optical calibration and transmitted deep field galaxy images."
+  },
+  {
+    "id": "eval_hi_en_01",
+    "pair_type": "HI-EN",
+    "topic": "digital_payments_fintech",
+    "is_equivalent": true,
+    "lang1": "hi",
+    "text1": "डिजिटल भुगतान और यूपीआई ने तोड़े रिकॉर्ड, वित्तीय समावेशन में भारी वृद्धि।",
+    "lang2": "en",
+    "text2": "Digital payment platforms and instant financial transactions broke all-time monthly transaction volume records."
+  },
+  {
+    "id": "eval_hi_en_02",
+    "pair_type": "HI-EN",
+    "topic": "cricket_sports",
+    "is_equivalent": true,
+    "lang1": "hi",
+    "text1": "भारतीय क्रिकेट टीम ने घरेलू श्रृंखला में शानदार प्रदर्शन कर टेस्ट श्रृंखला जीती।",
+    "lang2": "en",
+    "text2": "The national cricket team secured an emphatic victory in the championship series with disciplined bowling and batting."
+  },
+  {
+    "id": "eval_hi_en_03",
+    "pair_type": "HI-EN",
+    "topic": "negative_space_vs_cricket",
+    "is_equivalent": false,
+    "lang1": "hi",
+    "text1": "इसरो ने मानव अंतरिक्ष मिशन गगनयान के लिए क्रायोजेनिक इंजन का सफल परीक्षण किया।",
+    "lang2": "en",
+    "text2": "A dramatic final over decided the cricket championship match before a capacity stadium crowd."
+  }
+]
+

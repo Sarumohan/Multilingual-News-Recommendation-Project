@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Source Code Dossier - Advanced Multimodal & Multilingual News Recommender</title>
+<style>
+@page {
+    size: A4 portrait;
+    margin: 14mm 14mm 14mm 14mm;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.5;
+}
+
+/* ==============================================================
+   COVER PAGE
+   ============================================================== */
+.cover-page {
+    page-break-after: always;
+    /* min-height: 94vh; */
+    border: 3px double #1e3a8a;
+    padding: 36px 32px;
+    box-sizing: border-box;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background: #ffffff;
+}
+
+.cover-header-tag {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.cover-title {
+    font-size: 21pt;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 16px 0 10px 0;
+}
+
+.cover-subtitle {
+    font-size: 12.5pt;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 24px;
+}
+
+.cover-pill-container {
+    /* display: flex; */
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0 24px 0;
+    flex-wrap: wrap;
+}
+
+.cover-pill {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 8.5pt;
+    font-weight: 600;
+}
+
+.cover-pill.highlight {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+}
+
+.cover-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.cover-kpi {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 8px;
+}
+
+.cover-kpi-value {
+    font-size: 17pt;
+    font-weight: 800;
+    color: #1e3a8a;
+}
+
+.cover-kpi-label {
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.cover-abstract {
+    text-align: justify;
+    font-size: 9pt;
+    color: #334155;
+    line-height: 1.6;
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.cover-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    margin-top: 20px;
+    font-size: 8.5pt;
+    color: #64748b;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+/* ==============================================================
+   TABLE OF CONTENTS & ARCHITECTURE OVERVIEW
+   ============================================================== */
+.toc-page {
+    page-break-before: always;
+    page-break-after: always;
+}
+
+.toc-header {
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+.toc-title {
+    font-size: 16pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin-top: 12px;
+}
+
+.toc-table th {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.toc-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.toc-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.toc-chapter-badge {
+    background: #e2e8f0;
+    color: #334155;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 7pt;
+    font-weight: 700;
+}
+
+/* ==============================================================
+   CHAPTER SECTIONS & FILE CARDS
+   ============================================================== */
+.chapter-section {
+    page-break-before: always;
+}
+
+.chapter-cover {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 22px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-number {
+    font-size: 8.5pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #93c5fd;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.chapter-title {
+    font-size: 16pt;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.chapter-desc {
+    font-size: 9pt;
+    color: #cbd5e1;
+    margin: 0;
+    line-height: 1.45;
+}
+
+.file-card {
+    margin-bottom: 24px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+    page-break-inside: auto;
+}
+
+.file-header {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 7px 12px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8.5pt;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-index {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.file-path {
+    font-weight: 700;
+    color: #60a5fa;
+}
+
+.file-meta {
+    font-size: 7.5pt;
+    color: #94a3b8;
+}
+
+.file-purpose {
+    background: #f1f5f9;
+    border-bottom: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    font-size: 8pt;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.file-purpose strong {
+    color: #0f172a;
+}
+
+/* Pygments Code Container */
+.codehilite {
+    margin: 0;
+}
+
+.codehilite pre {
+    font-family: 'Consolas', 'Courier New', 'Lucida Console', monospace;
+    font-size: 7.2pt;
+    line-height: 1.32;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background-color: #fafbfc;
+    padding: 8px 10px;
+    margin: 0;
+}
+
+.codehilite .linenos {
+    color: #94a3b8;
+    user-select: none;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: right;
+    min-width: 26px;
+    border-right: 1px solid #e2e8f0;
+    padding-right: 6px;
+}
+
+pre { line-height: 125%; }
+td.linenos .normal { color: #666666; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #666666; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #f0f0f0; }
+.codehilite .c { color: #60A0B0; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #F00 } /* Error */
+.codehilite .k { color: #007020; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666 } /* Operator */
+.codehilite .ch { color: #60A0B0; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #60A0B0; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #007020 } /* Comment.Preproc */
+.codehilite .cpf { color: #60A0B0; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #60A0B0; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #60A0B0; background-color: #FFF0F0 } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.codehilite .gr { color: #F00 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #00A000 } /* Generic.Inserted */
+.codehilite .go { color: #888 } /* Generic.Output */
+.codehilite .gp { color: #C65D09; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #04D } /* Generic.Traceback */
+.codehilite .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #007020 } /* Keyword.Pseudo */
+.codehilite .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #902000 } /* Keyword.Type */
+.codehilite .m { color: #40A070 } /* Literal.Number */
+.codehilite .s { color: #4070A0 } /* Literal.String */
+.codehilite .na { color: #4070A0 } /* Name.Attribute */
+.codehilite .nb { color: #007020 } /* Name.Builtin */
+.codehilite .nc { color: #0E84B5; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #60ADD5 } /* Name.Constant */
+.codehilite .nd { color: #555; font-weight: bold } /* Name.Decorator */
+.codehilite .ni { color: #D55537; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #007020 } /* Name.Exception */
+.codehilite .nf { color: #06287E } /* Name.Function */
+.codehilite .nl { color: #002070; font-weight: bold } /* Name.Label */
+.codehilite .nn { color: #0E84B5; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #BB60D5 } /* Name.Variable */
+.codehilite .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #BBB } /* Text.Whitespace */
+.codehilite .mb { color: #40A070 } /* Literal.Number.Bin */
+.codehilite .mf { color: #40A070 } /* Literal.Number.Float */
+.codehilite .mh { color: #40A070 } /* Literal.Number.Hex */
+.codehilite .mi { color: #40A070 } /* Literal.Number.Integer */
+.codehilite .mo { color: #40A070 } /* Literal.Number.Oct */
+.codehilite .sa { color: #4070A0 } /* Literal.String.Affix */
+.codehilite .sb { color: #4070A0 } /* Literal.String.Backtick */
+.codehilite .sc { color: #4070A0 } /* Literal.String.Char */
+.codehilite .dl { color: #4070A0 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #4070A0; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #4070A0 } /* Literal.String.Double */
+.codehilite .se { color: #4070A0; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #4070A0 } /* Literal.String.Heredoc */
+.codehilite .si { color: #70A0D0; font-style: italic } /* Literal.String.Interpol */
+.codehilite .sx { color: #C65D09 } /* Literal.String.Other */
+.codehilite .sr { color: #235388 } /* Literal.String.Regex */
+.codehilite .s1 { color: #4070A0 } /* Literal.String.Single */
+.codehilite .ss { color: #517918 } /* Literal.String.Symbol */
+.codehilite .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #06287E } /* Name.Function.Magic */
+.codehilite .vc { color: #BB60D5 } /* Name.Variable.Class */
+.codehilite .vg { color: #BB60D5 } /* Name.Variable.Global */
+.codehilite .vi { color: #BB60D5 } /* Name.Variable.Instance */
+.codehilite .vm { color: #BB60D5 } /* Name.Variable.Magic */
+.codehilite .il { color: #40A070 } /* Literal.Number.Integer.Long */
+</style>
+</head>
+<body>
+
+<!-- ==============================================================
+     COVER PAGE
+     ============================================================== -->
+<div class="cover-page">
+    <div>
+        <div class="cover-header-tag">
+            Final Year Capstone Project Implementation Dossier &bull; Academic Submission
+        </div>
+        
+        <h1 class="cover-title">
+            Advanced Multimodal & Multilingual News Recommendation Framework
+        </h1>
+        
+        <div class="cover-subtitle">
+            Robust, Explainable, and Personalized Content Delivery across English, Hindi, and Assamese
+        </div>
+
+        <div class="cover-pill-container">
+            <span class="cover-pill highlight">🌐 Genuine Multilingual (EN, HI, AS)</span>
+            <span class="cover-pill">🧠 MiniLM + IndicBERTv2</span>
+            <span class="cover-pill">🖼️ ResNet-50 Vision (2048-d)</span>
+            <span class="cover-pill highlight">🧬 Multimodal Fusion (2432-d)</span>
+            <span class="cover-pill">⚡ Hybrid CB + CF</span>
+            <span class="cover-pill">🕒 Temporal Decay (&lambda;=0.05)</span>
+            <span class="cover-pill">⚖️ MMR Diversity (&lambda;=0.70)</span>
+            <span class="cover-pill highlight">💡 Explainable AI (XAI)</span>
+            <span class="cover-pill">🖥️ Streamlit Interactive UI</span>
+        </div>
+
+        <div class="cover-kpi-grid">
+            <div class="cover-kpi">
+                <div class="cover-kpi-value">74</div>
+                <div class="cover-kpi-label">Source Files</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="cover-kpi-value">9,182</div>
+                <div class="cover-kpi-label">Lines of Code</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="cover-kpi-value">3</div>
+                <div class="cover-kpi-label">Supported Languages</div>
+            </div>
+            <div class="cover-kpi">
+                <div class="cover-kpi-value">86 / 86</div>
+                <div class="cover-kpi-label">Unit Tests Passing (100%)</div>
+            </div>
+        </div>
+
+        <div class="cover-abstract">
+            <strong>System Abstract & Architectural Contribution:</strong>
+            This dossier contains the verified source code implementation for the complete news recommendation framework. 
+            The architecture addresses two fundamental challenges in modern digital journalism: language under-representation 
+            (specifically regional Indic languages such as Assamese alongside Hindi and English) and unimodal content blindness. 
+            The framework integrates MiniLM-L12-v2 (384-d) with AI4Bharat IndicBERTv2 (768-d) for authentic script representation, 
+            ResNet-50 (2048-d) for visual feature extraction, and a Weighted Normalized Concatenation fusion layer yielding 
+            2432-dimensional multimodal embeddings. Recommendations are synthesized through a hybrid content-collaborative engine 
+            governed by exponential temporal decay (&lambda;=0.05) and Maximal Marginal Relevance (MMR) re-ranking (&lambda;=0.70), 
+            delivering +84.89% category entropy gain, -66.67% redundancy reduction, and 4-factor Explainable AI (XAI) attributions.
+        </div>
+    </div>
+
+    <div class="cover-footer">
+        <div><strong>Project:</strong> Final Year Capstone Research & Implementation</div>
+        <div><strong>Environment:</strong> Python 3.14 &bull; PyTorch 2.15 &bull; Streamlit 1.67 &bull; SQLite3</div>
+        <div><strong>Date:</strong> November 2026</div>
+    </div>
+</div>
+
+<!-- ==============================================================
+     TABLE OF CONTENTS
+     ============================================================== -->
+<div class="toc-page">
+    <div class="toc-header">
+        <h2 class="toc-title">📑 Complete Source Code Directory & Manifest</h2>
+        <div style="font-size: 8.5pt; color: #64748b; margin-top: 4px;">
+            Structured catalog of all 74 active implementation files (9,182 total lines) submitted for mentor review.
+        </div>
+    </div>
+
+    <table class="toc-table">
+        <thead>
+            <tr>
+                <th style="width: 25px;">#</th>
+                <th style="width: 220px;">File Path</th>
+                <th style="width: 140px;">Subsystem</th>
+                <th style="width: 45px; text-align: right;">Lines</th>
+                <th>Module Role & Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">1</td>
+                <td><strong style="color: #0f172a;">README.md</strong></td>
+                <td><span class="toc-chapter-badge">Ch 1</span> System Configuration</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">176</td>
+                <td style="color: #475569; font-size: 8.5pt;">Project overview, architectural pipeline, features, setup instructions, and evaluation summary.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">2</td>
+                <td><strong style="color: #0f172a;">requirements.txt</strong></td>
+                <td><span class="toc-chapter-badge">Ch 1</span> System Configuration</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">31</td>
+                <td style="color: #475569; font-size: 8.5pt;">Pinned Python package dependencies for PyTorch, Transformers, Streamlit, and scientific computing.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">3</td>
+                <td><strong style="color: #0f172a;">config/config.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 1</span> System Configuration</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">84</td>
+                <td style="color: #475569; font-size: 8.5pt;">Central project configuration: model checkpoints, language codes, embedding dimensions, and hyperparameters.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">4</td>
+                <td><strong style="color: #0f172a;">.streamlit/config.toml</strong></td>
+                <td><span class="toc-chapter-badge">Ch 1</span> System Configuration</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">13</td>
+                <td style="color: #475569; font-size: 8.5pt;">Streamlit UI configuration locking in the dark theme palette and server settings.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">5</td>
+                <td><strong style="color: #0f172a;">config/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 1</span> System Configuration</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">3</td>
+                <td style="color: #475569; font-size: 8.5pt;">Configuration package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">6</td>
+                <td><strong style="color: #0f172a;">database/schema.sql</strong></td>
+                <td><span class="toc-chapter-badge">Ch 2</span> Relational Database</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">76</td>
+                <td style="color: #475569; font-size: 8.5pt;">DDL schema defining tables, relational constraints, foreign keys, and indices.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">7</td>
+                <td><strong style="color: #0f172a;">database/db_manager.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 2</span> Relational Database</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">200</td>
+                <td style="color: #475569; font-size: 8.5pt;">Thread-safe DatabaseManager providing query execution, CRUD operations, and interaction logging.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">8</td>
+                <td><strong style="color: #0f172a;">database/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 2</span> Relational Database</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">3</td>
+                <td style="color: #475569; font-size: 8.5pt;">Database package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">9</td>
+                <td><strong style="color: #0f172a;">src/preprocessing/cleaner.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 3</span> Dataset Ingestion</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">130</td>
+                <td style="color: #475569; font-size: 8.5pt;">Regex-based text normalization, whitespace cleanup, and script validation across EN, HI, and AS.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">10</td>
+                <td><strong style="color: #0f172a;">src/preprocessing/dataset_loader.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 3</span> Dataset Ingestion</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">301</td>
+                <td style="color: #475569; font-size: 8.5pt;">Dataset ingestion, CSV parsing, metadata extraction, validation, and SQLite synchronization.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">11</td>
+                <td><strong style="color: #0f172a;">src/preprocessing/run_pipeline.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 3</span> Dataset Ingestion</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">142</td>
+                <td style="color: #475569; font-size: 8.5pt;">End-to-end command-line runner for Phase 2 data preprocessing and synchronization.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">12</td>
+                <td><strong style="color: #0f172a;">src/preprocessing/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 3</span> Dataset Ingestion</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">5</td>
+                <td style="color: #475569; font-size: 8.5pt;">Preprocessing package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">13</td>
+                <td><strong style="color: #0f172a;">src/embeddings/multilingual_encoder.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">102</td>
+                <td style="color: #475569; font-size: 8.5pt;">Sentence-Transformers MiniLM wrapper producing 384-dimensional dense semantic text vectors.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">14</td>
+                <td><strong style="color: #0f172a;">src/embeddings/indicbert_encoder.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">133</td>
+                <td style="color: #475569; font-size: 8.5pt;">AI4Bharat IndicBERTv2 encoder (768-d) with attention-mask-aware mean pooling for Hindi and Assamese.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">15</td>
+                <td><strong style="color: #0f172a;">src/embeddings/embedding_generator.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">225</td>
+                <td style="color: #475569; font-size: 8.5pt;">Batch embedding pipeline with model caching, NPZ persistence, and metadata serialization.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">16</td>
+                <td><strong style="color: #0f172a;">src/embeddings/generate_embeddings.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">105</td>
+                <td style="color: #475569; font-size: 8.5pt;">CLI execution script to extract and persist text embeddings for the news corpus.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">17</td>
+                <td><strong style="color: #0f172a;">src/embeddings/similarity.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">75</td>
+                <td style="color: #475569; font-size: 8.5pt;">Cosine similarity calculation, matrix normalization, and top-K candidate retrieval utilities.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">18</td>
+                <td><strong style="color: #0f172a;">src/embeddings/evaluate_assamese_support.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">196</td>
+                <td style="color: #475569; font-size: 8.5pt;">Cross-lingual evaluation suite comparing MiniLM vs IndicBERT on English-Hindi-Assamese parallel pairs.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">19</td>
+                <td><strong style="color: #0f172a;">src/embeddings/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 4</span> Multilingual Text Representation</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">12</td>
+                <td style="color: #475569; font-size: 8.5pt;">Embeddings package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">20</td>
+                <td><strong style="color: #0f172a;">src/vision/image_encoder.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">144</td>
+                <td style="color: #475569; font-size: 8.5pt;">Pretrained ResNet-50 encoder with penultimate layer pooling generating 2048-d visual feature vectors.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">21</td>
+                <td><strong style="color: #0f172a;">src/vision/image_downloader.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">137</td>
+                <td style="color: #475569; font-size: 8.5pt;">Asynchronous/batch image fetcher with timeout handling, validation, RGB conversion, and storage in data/images/.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">22</td>
+                <td><strong style="color: #0f172a;">src/vision/image_feature_pipeline.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">258</td>
+                <td style="color: #475569; font-size: 8.5pt;">Complete vision pipeline coordinating download, validation, feature extraction, and NPZ persistence.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">23</td>
+                <td><strong style="color: #0f172a;">src/vision/run_image_pipeline.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">98</td>
+                <td style="color: #475569; font-size: 8.5pt;">Automated batch runner for complete image pipeline execution and verification.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">24</td>
+                <td><strong style="color: #0f172a;">src/vision/similarity.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">73</td>
+                <td style="color: #475569; font-size: 8.5pt;">Visual cosine similarity matrix computation and nearest-neighbor visual retrieval.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">25</td>
+                <td><strong style="color: #0f172a;">src/vision/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 5</span> Computer Vision</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">15</td>
+                <td style="color: #475569; font-size: 8.5pt;">Vision package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">26</td>
+                <td><strong style="color: #0f172a;">src/fusion/multimodal_fusion.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 6</span> Multimodal Feature Fusion Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">169</td>
+                <td style="color: #475569; font-size: 8.5pt;">Multimodal fusion implementation: L2 normalization, weighted concatenation (alpha=0.7, beta=0.3), and zero-padding fallback.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">27</td>
+                <td><strong style="color: #0f172a;">src/fusion/run_fusion.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 6</span> Multimodal Feature Fusion Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">191</td>
+                <td style="color: #475569; font-size: 8.5pt;">CLI execution script that fuses text and visual vectors, audits alignment, and saves multimodal embeddings.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">28</td>
+                <td><strong style="color: #0f172a;">src/fusion/audit_embeddings.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 6</span> Multimodal Feature Fusion Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">100</td>
+                <td style="color: #475569; font-size: 8.5pt;">Inspection utility verifying embedding dimensions, article ID alignment, numerical validity, and sparsity.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">29</td>
+                <td><strong style="color: #0f172a;">src/fusion/similarity.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 6</span> Multimodal Feature Fusion Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">87</td>
+                <td style="color: #475569; font-size: 8.5pt;">Multimodal cosine similarity calculations and retrieval across text-image unified representations.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">30</td>
+                <td><strong style="color: #0f172a;">src/fusion/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 6</span> Multimodal Feature Fusion Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">9</td>
+                <td style="color: #475569; font-size: 8.5pt;">Fusion package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">31</td>
+                <td><strong style="color: #0f172a;">src/recommendation/user_profile.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">195</td>
+                <td style="color: #475569; font-size: 8.5pt;">Dynamic user profile modelling aggregating interaction weights (click=1.0, read=1.5, like=2.0, bookmark=3.0) and category affinities.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">32</td>
+                <td><strong style="color: #0f172a;">src/recommendation/content_based.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">294</td>
+                <td style="color: #475569; font-size: 8.5pt;">Content-Based recommender matching user interest vectors with multimodal and text candidate representations.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">33</td>
+                <td><strong style="color: #0f172a;">src/recommendation/collaborative.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">237</td>
+                <td style="color: #475569; font-size: 8.5pt;">Item-item collaborative filtering using cosine similarity on user interaction rating matrices with cold-start fallbacks.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">34</td>
+                <td><strong style="color: #0f172a;">src/recommendation/temporal.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">136</td>
+                <td style="color: #475569; font-size: 8.5pt;">Temporal decay modelling: applies exp(-lambda * dt) to user interactions and computes article publication freshness.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">35</td>
+                <td><strong style="color: #0f172a;">src/recommendation/diversity.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">204</td>
+                <td style="color: #475569; font-size: 8.5pt;">Maximal Marginal Relevance (MMR) re-ranking algorithm balancing relevance against intra-list redundancy (lambda=0.70).</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">36</td>
+                <td><strong style="color: #0f172a;">src/recommendation/hybrid_engine.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">484</td>
+                <td style="color: #475569; font-size: 8.5pt;">Core Hybrid Recommendation Engine unifying CB, CF, temporal freshness, MMR diversity, cold-start fallbacks, and cross-lingual discovery.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">37</td>
+                <td><strong style="color: #0f172a;">src/recommendation/evaluate.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">108</td>
+                <td style="color: #475569; font-size: 8.5pt;">Recommendation performance evaluation on historical user interaction data.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">38</td>
+                <td><strong style="color: #0f172a;">src/recommendation/run_pipeline.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">117</td>
+                <td style="color: #475569; font-size: 8.5pt;">Batch recommendation runner for Phase 5 engine validation.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">39</td>
+                <td><strong style="color: #0f172a;">src/recommendation/run_phase6_pipeline.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">103</td>
+                <td style="color: #475569; font-size: 8.5pt;">Verification pipeline testing temporal modelling, MMR diversity, and explainability end-to-end.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">40</td>
+                <td><strong style="color: #0f172a;">src/recommendation/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 7</span> Hybrid News Recommendation Engine</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">18</td>
+                <td style="color: #475569; font-size: 8.5pt;">Recommendation package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">41</td>
+                <td><strong style="color: #0f172a;">src/explainability/explainer.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 8</span> Explainable AI (XAI) Attribution Module</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">117</td>
+                <td style="color: #475569; font-size: 8.5pt;">XAI Explainer computing 4-factor attribution scores and generating human-readable justification statements.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">42</td>
+                <td><strong style="color: #0f172a;">src/explainability/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 8</span> Explainable AI (XAI) Attribution Module</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">5</td>
+                <td style="color: #475569; font-size: 8.5pt;">Explainability package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">43</td>
+                <td><strong style="color: #0f172a;">src/evaluation/ranking_metrics.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 9</span> Offline Evaluation, Benchmarking</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">122</td>
+                <td style="color: #475569; font-size: 8.5pt;">Standard ranking evaluation metrics implementation: P@K, R@K, NDCG@K, MAP@K, and MRR.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">44</td>
+                <td><strong style="color: #0f172a;">src/evaluation/benchmark_suite.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 9</span> Offline Evaluation, Benchmarking</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">425</td>
+                <td style="color: #475569; font-size: 8.5pt;">Comprehensive offline benchmark suite executing leak-free train/test evaluation across 5 baseline models.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">45</td>
+                <td><strong style="color: #0f172a;">src/evaluation/stability.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 9</span> Offline Evaluation, Benchmarking</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">191</td>
+                <td style="color: #475569; font-size: 8.5pt;">Sensitivity analysis testing recommendation stability across varying temporal decay and MMR lambda parameters.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">46</td>
+                <td><strong style="color: #0f172a;">src/evaluation/generate_visualizations.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 9</span> Offline Evaluation, Benchmarking</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">188</td>
+                <td style="color: #475569; font-size: 8.5pt;">Interactive Plotly visualization generator producing publication-ready benchmark charts.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">47</td>
+                <td><strong style="color: #0f172a;">src/evaluation/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 9</span> Offline Evaluation, Benchmarking</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">5</td>
+                <td style="color: #475569; font-size: 8.5pt;">Evaluation package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">48</td>
+                <td><strong style="color: #0f172a;">app/app.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">446</td>
+                <td style="color: #475569; font-size: 8.5pt;">Main Streamlit application implementing 8 interactive modules: Home, News Explorer, Recommendations, Cross-Lingual, XAI, and Analytics.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">49</td>
+                <td><strong style="color: #0f172a;">app/components/cards.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">113</td>
+                <td style="color: #475569; font-size: 8.5pt;">Theme-native article card component with uniform (400, 240) aspect ratio cropping, category badges, and action buttons.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">50</td>
+                <td><strong style="color: #0f172a;">app/components/charts.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">89</td>
+                <td style="color: #475569; font-size: 8.5pt;">Plotly visualization components rendering language, category, baseline, and diversity trade-off charts.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">51</td>
+                <td><strong style="color: #0f172a;">app/static/style.css</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">151</td>
+                <td style="color: #475569; font-size: 8.5pt;">Custom dark theme CSS stylesheet (#0b0f19 bg, #1e293b cards, #f8fafc text, button hover effects).</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">52</td>
+                <td><strong style="color: #0f172a;">app/components/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">17</td>
+                <td style="color: #475569; font-size: 8.5pt;">UI components package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">53</td>
+                <td><strong style="color: #0f172a;">app/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 10</span> Interactive Web Application (Streamlit Dashboard)</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">2</td>
+                <td style="color: #475569; font-size: 8.5pt;">App package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">54</td>
+                <td><strong style="color: #0f172a;">src/utils/helpers.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 11</span> Framework Utilities</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">69</td>
+                <td style="color: #475569; font-size: 8.5pt;">General helper utilities: directory creation, JSON serialization, timestamp parsing, and array logging.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">55</td>
+                <td><strong style="color: #0f172a;">src/utils/__init__.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 11</span> Framework Utilities</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">3</td>
+                <td style="color: #475569; font-size: 8.5pt;">Utils package initializer.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">56</td>
+                <td><strong style="color: #0f172a;">src/models/text_encoder.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 11</span> Framework Utilities</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">5</td>
+                <td style="color: #475569; font-size: 8.5pt;">Text encoder stub interface.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">57</td>
+                <td><strong style="color: #0f172a;">src/models/image_encoder.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 11</span> Framework Utilities</td>
+                <td style="text-align: right; font-family: monospace; color: #2563eb; font-weight: bold;">5</td>
+                <td style="color: #475569; font-size: 8.5pt;">Vision encoder stub interface.</td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center; color: #64748b; font-weight: bold;">58</td>
+                <td><strong style="color: #0f172a;">src/models/multimodal_fusion.py</strong></td>
+                <td><span class="toc-chapter-badge">Ch 11</span> Framework Utilities</td>
+                <td style="text-align: right; f</body></html>

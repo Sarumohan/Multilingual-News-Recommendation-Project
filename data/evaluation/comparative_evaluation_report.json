@@ -1,0 +1,164 @@
+{
+  "evaluation_timestamp": "2026-11-06 07:12:34 UTC",
+  "total_pairs_evaluated": 12,
+  "models_compared": {
+    "model_a": {
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "embedding_dim": 384,
+      "assamese_native_corpus": false
+    },
+    "model_b": {
+      "name": "ai4bharat/IndicBERTv2-SS",
+      "embedding_dim": 768,
+      "assamese_native_corpus": true
+    }
+  },
+  "pair_results": [
+    {
+      "id": "eval_as_as_01",
+      "pair_type": "AS-AS",
+      "topic": "wildlife_conservation",
+      "is_equivalent": true,
+      "minilm_sim": 0.9755,
+      "indicbert_sim": 0.9714
+    },
+    {
+      "id": "eval_as_as_02",
+      "pair_type": "AS-AS",
+      "topic": "negative_wildlife_vs_solar",
+      "is_equivalent": false,
+      "minilm_sim": 0.9251,
+      "indicbert_sim": 0.9561
+    },
+    {
+      "id": "eval_as_hi_01",
+      "pair_type": "AS-HI",
+      "topic": "artificial_intelligence",
+      "is_equivalent": true,
+      "minilm_sim": 0.47,
+      "indicbert_sim": 0.6
+    },
+    {
+      "id": "eval_as_hi_02",
+      "pair_type": "AS-HI",
+      "topic": "clean_energy",
+      "is_equivalent": true,
+      "minilm_sim": 0.1314,
+      "indicbert_sim": 0.6308
+    },
+    {
+      "id": "eval_as_hi_03",
+      "pair_type": "AS-HI",
+      "topic": "negative_tea_vs_cricket",
+      "is_equivalent": false,
+      "minilm_sim": 0.0719,
+      "indicbert_sim": 0.6249
+    },
+    {
+      "id": "eval_as_en_01",
+      "pair_type": "AS-EN",
+      "topic": "artificial_intelligence",
+      "is_equivalent": true,
+      "minilm_sim": 0.4721,
+      "indicbert_sim": 0.5865
+    },
+    {
+      "id": "eval_as_en_02",
+      "pair_type": "AS-EN",
+      "topic": "wildlife_conservation",
+      "is_equivalent": true,
+      "minilm_sim": 0.127,
+      "indicbert_sim": 0.6201
+    },
+    {
+      "id": "eval_as_en_03",
+      "pair_type": "AS-EN",
+      "topic": "negative_tea_vs_cbdc",
+      "is_equivalent": false,
+      "minilm_sim": 0.0717,
+      "indicbert_sim": 0.5934
+    },
+    {
+      "id": "eval_as_en_04",
+      "pair_type": "AS-EN",
+      "topic": "negative_wildlife_vs_space",
+      "is_equivalent": false,
+      "minilm_sim": 0.0545,
+      "indicbert_sim": 0.65
+    },
+    {
+      "id": "eval_hi_en_01",
+      "pair_type": "HI-EN",
+      "topic": "digital_payments_fintech",
+      "is_equivalent": true,
+      "minilm_sim": 0.6375,
+      "indicbert_sim": 0.8367
+    },
+    {
+      "id": "eval_hi_en_02",
+      "pair_type": "HI-EN",
+      "topic": "cricket_sports",
+      "is_equivalent": true,
+      "minilm_sim": 0.7267,
+      "indicbert_sim": 0.8513
+    },
+    {
+      "id": "eval_hi_en_03",
+      "pair_type": "HI-EN",
+      "topic": "negative_space_vs_cricket",
+      "is_equivalent": false,
+      "minilm_sim": 0.0461,
+      "indicbert_sim": 0.7421
+    }
+  ],
+  "summary_by_pair_type": {
+    "AS-AS": {
+      "minilm": {
+        "mean_equivalent": 0.9755,
+        "mean_unrelated": 0.9251,
+        "discrimination_margin": 0.0504
+      },
+      "indicbert": {
+        "mean_equivalent": 0.9714,
+        "mean_unrelated": 0.9561,
+        "discrimination_margin": 0.0153
+      }
+    },
+    "AS-HI": {
+      "minilm": {
+        "mean_equivalent": 0.3007,
+        "mean_unrelated": 0.0719,
+        "discrimination_margin": 0.2288
+      },
+      "indicbert": {
+        "mean_equivalent": 0.6154,
+        "mean_unrelated": 0.6249,
+        "discrimination_margin": -0.0095
+      }
+    },
+    "AS-EN": {
+      "minilm": {
+        "mean_equivalent": 0.2995,
+        "mean_unrelated": 0.0631,
+        "discrimination_margin": 0.2364
+      },
+      "indicbert": {
+        "mean_equivalent": 0.6033,
+        "mean_unrelated": 0.6217,
+        "discrimination_margin": -0.0184
+      }
+    },
+    "HI-EN": {
+      "minilm": {
+        "mean_equivalent": 0.6821,
+        "mean_unrelated": 0.0461,
+        "discrimination_margin": 0.636
+      },
+      "indicbert": {
+        "mean_equivalent": 0.844,
+        "mean_unrelated": 0.7421,
+        "discrimination_margin": 0.1019
+      }
+    }
+  }
+}
